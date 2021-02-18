@@ -58,7 +58,7 @@ app.post("/api/shorturl/new", function (req, res) {
 });
 app.get("/api/shorturl/:hash", (req, res) => {
   const hash = req.params.hash;
-  urlModel.findOne({ hash: hash }, (err, data) => {
+  UrlModel.findOne({ hash: hash }, (err, data) => {
     if (err) {
       return res.json({ error: err });;
     } else {
